@@ -13,7 +13,7 @@
     
 # Create employees table.
  
-     DROP TABLE IF EXISTS employees;
+    DROP TABLE IF EXISTS employees;
     CREATE TABLE employees
     (
                 emp_id VARCHAR(10) PRIMARY KEY,
@@ -76,7 +76,7 @@
                 FOREIGN KEY (return_book_isbn) REFERENCES books(isbn)
     );
 
-# inserting values in all tables.
+# Inserting values in member table.
     
     INSERT INTO members(member_id, member_name, member_address, reg_date) 
     VALUES
@@ -93,7 +93,8 @@
     ('C118', 'Sam', '133 Pine St', '2024-06-01'),    
     ('C119', 'John', '143 Main St', '2024-05-01');
     SELECT * FROM members;
-    
+
+# Inserting values in branch table.
     
     INSERT INTO branch(branch_id, manager_id, branch_address, contact_no) 
     VALUES
@@ -104,6 +105,7 @@
     ('B005', 'E110', '890 Maple St', '+919099988680');
     SELECT * FROM branch;
 
+# Inserting values in employees table.
 
     INSERT INTO employees(emp_id, emp_name, position, salary, branch_id) 
     VALUES
@@ -120,7 +122,8 @@
     ('E111', 'Christopher Lee', 'Assistant', 65000.00, 'B005');
     SELECT * FROM employees;
     
-    
+# Inserting values in books table.
+
     INSERT INTO books(isbn, book_title, category, rental_price, status, author, publisher) 
     VALUES
     ('978-0-553-29698-2', 'The Catcher in the Rye', 'Classic', 7.00, 'yes', 'J.D. Salinger', 'Little, Brown and Company'),
@@ -159,7 +162,7 @@
     ('978-0-7432-4722-5', 'Angels & Demons', 'Mystery', 7.50, 'yes', 'Dan Brown', 'Doubleday'),
     ('978-0-7432-7356-4', 'The Hobbit', 'Fantasy', 7.00, 'yes', 'J.R.R. Tolkien', 'Houghton Mifflin Harcourt');
 
-    
+# Inserting values in issued_status table.
     INSERT INTO issued_status(issued_id, issued_member_id, issued_book_name, issued_date, issued_book_isbn, issued_emp_id) 
     VALUES
     ('IS106', 'C106', 'Animal Farm', '2024-03-10', '978-0-330-25864-8', 'E104'),
@@ -198,7 +201,8 @@
     ('IS139', 'C109', 'Harry Potter and the Sorcerers Stone', '2024-04-12', '978-0-679-76489-8', 'E105'),
     ('IS140', 'C110', 'Animal Farm', '2024-04-13', '978-0-330-25864-8', 'E102');
     
-    
+# Inserting values in return_status table.
+
     INSERT INTO return_status(return_id, issued_id, return_date) 
     VALUES
     ('RS101', 'IS101', '2023-06-06'),
