@@ -332,4 +332,7 @@
     ON rs.issued_id = ist.issued_id
     WHERE rs.return_id IS NULL;
 
+  # Screenshot of E-R Diagram
   
+![Screenshot 2025-06-02 091527](https://github.com/user-attachments/assets/16c5f3eb-35fc-4ed0-94ae-41fcacc072d8)
+
